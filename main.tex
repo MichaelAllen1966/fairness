@@ -7,8 +7,8 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass{beamer}
-\usetheme{Warsaw}
-\setbeamersize{text margin left=3mm,text margin right=3mm} 
+\usetheme{Madrid}
+\setbeamersize{text margin left=5mm,text margin right=5mm} 
 
 %Information to be included in the title page:
 \title{The Alignment Problem}
@@ -45,8 +45,10 @@ In your groups think about what could possibly go wrong with our headline rush i
 \section[Representation]{Representation - are our data sets fit for purpose?}
 
 \begin{frame}
-Representation - are our data sets fit for purpose?
+\frametitle{Representation}
+\Large{Are our data sets fit for purpose?}
 \end{frame}
+
 
 %%%% Gorillas 
 
@@ -67,7 +69,7 @@ On Sunday evening of June 28, 2015, Jacky Alcine got a notification that a frien
     \begin{column}{0.3\textwidth}
         \includegraphics[width=1\textwidth]{./images/joy_buolamwini.jpg}
     \end{column}
-    \begin{column}{0.7\textwidth}
+    \begin{column}{0.67\textwidth}
         When Joy Buolamwini was a computer science undergrad at Georgia Tech in the early 2010s, she worked on an assignment to recognise emotions in faces. The problem was that the face recognition library she used would not detect her face, until she held up a white mask in front of her face.
         \\~\\
         At the time, many libraries were trained on the \emph{Labelled Faces in the Wild} database. It turned out that there are twice as many images of George W. Bush in the dataset as there are all of Black women combined.
@@ -78,11 +80,11 @@ On Sunday evening of June 28, 2015, Jacky Alcine got a notification that a frien
 \begin{frame}
 \frametitle{Face recognition and race 2}
 \begin{columns}
-    \begin{column}{0.4\textwidth}
+    \begin{column}{0.45\textwidth}
         \includegraphics[width=1\textwidth]{./images/gender_race_1.png}
     \end{column}
     
-    \begin{column}{0.4\textwidth}
+    \begin{column}{0.45\textwidth}
         \includegraphics[width=1\textwidth]{./images/gender_race_2.png}
     \end{column}
 \end{columns}
@@ -96,7 +98,8 @@ On Sunday evening of June 28, 2015, Jacky Alcine got a notification that a frien
 
 
 \begin{itemize}
-    \item /emph{Word embeddings}, such as Word2Vec, encode words in space so that similar words are located together, and that relationships exist between words, such that:
+\itemsep3mm % Increase bullet spacing
+    \item \emph{Word embeddings}, such as Word2Vec, encode words in space so that similar words are located close together, and that relationships exist between words, such that:
     \begin{itemize}
         \item {Subtracting the word embedding vector for \textbf{male} from \textbf{king}, and adding the word vector for \textbf{female}, gives \textbf{queen}.}
     \end{itemize}
@@ -110,7 +113,7 @@ On Sunday evening of June 28, 2015, Jacky Alcine got a notification that a frien
 
 \end{frame}
 
-%%%% Representation what can we learn
+%%%% Representation - what can we learn
 
 \begin{frame}
 \frametitle{Representation - What can we learn?}
@@ -123,8 +126,6 @@ On Sunday evening of June 28, 2015, Jacky Alcine got a notification that a frien
     \item \textbf{The model builder is responsible for the data they use to build the model.} The buck stops with them. At a minimum they must identify and communicate key weaknesses in model performance (but better to try and fix them - by gathering more balanced data if possible, or reducing over-represented data).
 \end{itemize}
 \end{frame}
-
-
 
 
 \end{document}
